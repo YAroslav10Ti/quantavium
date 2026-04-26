@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Курс ЕГЭ по математике — QUANTAVIUM</title>
+  <style>
+    body {
+      background: #f8faff;
+      font-family: system-ui, sans-serif;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background: #007bff;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .course-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .course-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .course-header h1 {
+      color: #007bff;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .course-content {
+      line-height: 1.6;
+    }
+
+    .materials-section {
+      margin: 30px 0;
+    }
+
+    .material-item {
+      background: #f5f9ff;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border-left: 4px solid #007bff;
+      transition: transform 0.2s;
+    }
+
+    .material-item:hover {
+      transform: translateX(5px);
+    }
+
+    .material-item a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+      display: block;
+      width: 100%;
+    }
+
+    .material-item a:hover {
+      text-decoration: underline;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: #666;
+    }
+
+    .error-message {
+      background: #ffeaea;
+      color: #d63031;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .debug-info {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/index.html">🏠 На главную</a>
+    <a href="/profile.html">👤 Профиль</a>
+  </nav>
+
+  <div class="course-container">
+    <div class="course-header">
+      <h1>Курс подготовки к ЕГЭ по математике</h1>
+      <p>Полный курс подготовки к Единому Государственному Экзамену по математике</p>
+    </div>
+
+    <div id="courseContent">
+      <div class="loading">Проверка доступа к курсу...</div>
+    </div>
+
+    <div class="debug-info" id="debugInfo" style="display: none;">
+      <strong>Отладочная информация:</strong>
+      <div id="debugContent"></div>
+    </div>
+  </div>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/courseAccess.js"></script>
+  <script src="/js/coursePage.js" data-course="егэ"></script>
+
+</body>
+</html>
